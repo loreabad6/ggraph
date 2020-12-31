@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ggraph</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.4.9000</span>
       </span>
     </div>
 
@@ -87,7 +87,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -151,7 +151,7 @@
 </li>
 <li>
   <a href="https://github.com/thomasp85/ggraph">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -176,30 +176,54 @@
 <h1 class="page-header" data-toc-text="development version">
 <a href="#ggraph-development-version" class="anchor"></a>ggraph (development version)<small> Unreleased </small>
 </h1>
+</div>
+    <div id="ggraph-204" class="section level1">
+<h1 class="page-header" data-toc-text="2.0.4">
+<a href="#ggraph-204" class="anchor"></a>ggraph 2.0.4<small> 2020-11-16 </small>
+</h1>
+<ul>
+<li>Fix bug in faceting functions where using algorithms based on sampling directly would result in errors</li>
+<li>Move CI to GitHub Actions</li>
+<li>Warn if a precalculated layout is passed to <code>layout</code> in <code><a href="../reference/ggraph.html">create_layout()</a></code> (<a href='https://github.com/thomasp85/ggraph/issues/208'>#208</a>)</li>
+<li>Warn when setting <code>dim</code> to a value higher than 2 in igraph layouts (<a href='https://github.com/thomasp85/ggraph/issues/160'>#160</a>)</li>
+<li>Fix bug when trying to plot a graph with no edges (<a href='https://github.com/thomasp85/ggraph/issues/214'>#214</a>)</li>
+<li>Fix a bug in edge geoms due to a typo (<a href='https://github.com/thomasp85/ggraph/issues/246'>#246</a>)</li>
+<li>Fix a bug in edge geoms where setting <code>label_colour</code> to <code>NA</code> would turn it off instead of inheriting the colour of the edge (<a href='https://github.com/thomasp85/ggraph/issues/238'>#238</a>)</li>
+<li>Fix a bug in edge geoms that prevented edge labels from being parsed as expressions (<a href='https://github.com/thomasp85/ggraph/issues/245'>#245</a>)</li>
+<li>Improve performance of dendrogram layout when calculating depth (<a href='https://github.com/thomasp85/ggraph/issues/248'>#248</a>)</li>
+<li>Fix a bug in hive layout when segmenting by a factor with unused levels (<a href='https://github.com/thomasp85/ggraph/issues/252'>#252</a>)</li>
+<li>Fix a bug in capping of path due to updates in grid. Setting cap unit to <code>native</code> now works as expected again (<a href='https://github.com/thomasp85/ggraph/issues/254'>#254</a>)</li>
+<li>Fix a bug in <code><a href="../reference/get_con.html">get_con()</a></code> that would require input to be sorted in the <code>from</code> vector (<a href='https://github.com/thomasp85/ggraph/issues/258'>#258</a>)</li>
+</ul>
+</div>
+    <div id="ggraph-203" class="section level1">
+<h1 class="page-header" data-toc-text="2.0.3">
+<a href="#ggraph-203" class="anchor"></a>ggraph 2.0.3<small> 2020-05-20 </small>
+</h1>
 <ul>
 <li>Fix bug in <code><a href="../reference/geom_edge_elbow.html">geom_edge_elbow()</a></code> that resulted in duplicated <code>group</code> columns in the data.</li>
 </ul>
 </div>
-    <div id="ggraph-2-0-2" class="section level1">
+    <div id="ggraph-202" class="section level1">
 <h1 class="page-header" data-toc-text="2.0.2">
-<a href="#ggraph-2-0-2" class="anchor"></a>ggraph 2.0.2<small> 2020-03-17 </small>
+<a href="#ggraph-202" class="anchor"></a>ggraph 2.0.2<small> 2020-03-17 </small>
 </h1>
 <ul>
 <li>Remove reshape2 dependency</li>
 </ul>
 </div>
-    <div id="ggraph-2-0-1" class="section level1">
+    <div id="ggraph-201" class="section level1">
 <h1 class="page-header" data-toc-text="2.0.1">
-<a href="#ggraph-2-0-1" class="anchor"></a>ggraph 2.0.1<small> 2020-02-07 </small>
+<a href="#ggraph-201" class="anchor"></a>ggraph 2.0.1<small> 2020-02-07 </small>
 </h1>
 <ul>
 <li>Fix bug in ggraph that will surface with the next grid release</li>
 <li>Deprecate <code><a href="../reference/qgraph.html">qgraph()</a></code> in favour of <code><a href="../reference/autograph.html">autograph()</a></code> to avoid name collision with <code>qgraph::qgraph()</code>. <code><a href="../reference/autograph.html">autograph()</a></code> is now also a generic with a default method, so you can provide your own specific ggraph plot method for your network classes</li>
 </ul>
 </div>
-    <div id="ggraph-2-0-0" class="section level1">
+    <div id="ggraph-200" class="section level1">
 <h1 class="page-header" data-toc-text="2.0.0">
-<a href="#ggraph-2-0-0" class="anchor"></a>ggraph 2.0.0<small> 2019-09-02 </small>
+<a href="#ggraph-200" class="anchor"></a>ggraph 2.0.0<small> 2019-09-02 </small>
 </h1>
 <p>This release is a major release including many new features, bug fixes and some breaking changes.</p>
 <div id="breaking-changes" class="section level2">
@@ -223,8 +247,9 @@
 <code>geom_edge_elbow</code> is no longer only available to dendrogram objects</li>
 <li>tidygraph algorithms can now be used directly within ggraph functions. E.g. you can have <code>sort.by = node_rank_hclust()</code> in your specification of a linear layout, or <code>aes(colour = group_infomap())</code> in node geoms</li>
 </ul>
-This big change fixes <a href='https://github.com/thomasp85/ggraph/issues/21'>#21</a>, <a href='https://github.com/thomasp85/ggraph/issues/72'>#72</a>, <a href='https://github.com/thomasp85/ggraph/issues/79'>#79</a>, and <a href='https://github.com/thomasp85/ggraph/issues/81'>#81</a>. A vignette has been added to describe the integration in more detail</li>
-<li>The <code>curvature</code> argument from <code><a href="../reference/geom_edge_arc.html">geom_edge_arc()</a></code> and <code><a href="../reference/geom_edge_hive.html">geom_edge_hive()</a></code> as well as the <code>spread</code> argument from <code><a href="../reference/geom_edge_fan.html">geom_edge_fan()</a></code> has been deprecated in favor of the new <code>strength</code> argument.</li>
+<p>This big change fixes <a href='https://github.com/thomasp85/ggraph/issues/21'>#21</a>, <a href='https://github.com/thomasp85/ggraph/issues/72'>#72</a>, <a href='https://github.com/thomasp85/ggraph/issues/79'>#79</a>, and <a href='https://github.com/thomasp85/ggraph/issues/81'>#81</a>. A vignette has been added to describe the integration in more detail</p>
+</li>
+<li><p>The <code>curvature</code> argument from <code><a href="../reference/geom_edge_arc.html">geom_edge_arc()</a></code> and <code><a href="../reference/geom_edge_hive.html">geom_edge_hive()</a></code> as well as the <code>spread</code> argument from <code><a href="../reference/geom_edge_fan.html">geom_edge_fan()</a></code> has been deprecated in favor of the new <code>strength</code> argument.</p></li>
 <li><p>ggraph plots now gets constructed with grid and axes removed from the default theme.</p></li>
 </ul>
 </div>
@@ -295,7 +320,7 @@ This big change fixes <a href='https://github.com/thomasp85/ggraph/issues/21'>#2
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
